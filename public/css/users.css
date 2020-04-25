@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.box-tools {
+    padding: 0;
+    margin-bottom: 5px;
+}
+.box-tools input, .box-tools button {
+    width: 100%;
+    height: 100%;
+}
+.box-tools button {
+    background-color: #d6d6d6;
+}
+.box-tools button:hover {
+    background-color: #aaaaaa;
+}
+.table-hover th{
+    padding: 8px 2px;
+    background-color: #d6d6d6;
+    text-align: center;
+}
+.table-hover td{
+    padding: 5px 2px;
+    text-align: center;
+    transition: .5s ease;
+}
+.table-hover td:hover {
+    background-color: #dddddd;
+}
+
+#btn_action {
+    opacity: 0;
+}
+.table-hover tr:hover #btn_action {
+    opacity: 1;
+}
+#btn_action button {
+    width: 100%;
+    padding: 0px;
+}
