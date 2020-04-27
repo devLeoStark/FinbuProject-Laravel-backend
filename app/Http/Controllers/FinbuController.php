@@ -34,7 +34,7 @@ class FinbuController extends Controller
     public function ShowUserPage() {
         if(session()->has('role') && session()->get('role', 'ADMINISTRATOR')) {
             $users = Users::all();
-            $stt = 0;
+            $stt   = 0;
             return view('users', compact('users', 'stt'));
         } else {
             return redirect(Route('login'));
