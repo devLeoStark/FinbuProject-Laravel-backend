@@ -22,6 +22,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::namespace('Api')->group(function() {
 
     Route::get('/users', 'FinbuController@ShowUserPage');
-    Route::get('/users/{id}', 'FinbuController@GetUser');
+    Route::get('/users/{email}', 'FinbuController@GetUser');
     Route::post('/users', 'FinbuController@AddUser');
+    // User Login
+    Route::GET('/user-login/{email}', 'FinbuController@UserLogin');
 });

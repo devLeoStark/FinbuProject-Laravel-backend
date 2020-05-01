@@ -13,8 +13,8 @@ class FinbuController extends Controller
         return Users::all();
     }
 
-    public function GetUser($User_ID) {
-        $user = Users::find($User_ID);
+    public function GetUser($User_Email) {
+        $user = Users::where("Email", $User_Email)->first();
         return $user;
     }
 
@@ -37,5 +37,10 @@ class FinbuController extends Controller
         // } catch(\Exception $error) {
         //     return ['insert'=> "error"];
         // }
+    }
+
+    public function UserLogin($Email) {
+        $user_password = Users::select("Password")->where("Email", $Email)->first();
+        return $user_password;
     }
 }
