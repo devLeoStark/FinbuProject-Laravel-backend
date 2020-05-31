@@ -20,10 +20,35 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::namespace('Api')->group(function() {
-
-    Route::get('/users', 'FinbuController@ShowUserPage');
-    Route::get('/users/{email}', 'FinbuController@GetUser');
-    Route::post('/users', 'FinbuController@AddUser');
-    // User Login
-    Route::GET('/user-login/{email}', 'FinbuController@UserLogin');
+// show all users
+    Route::get('/users', [
+        'as' => 'get-users',
+        'uses' => 'FinbuController@ShowUserPage'
+    ]);
+// show one user with email
+    Route::get('/users/{user_id}', [
+        'as' => 'get-user',
+        'uses' => 'FinbuController@GetUser'
+    
+    ]);
+// add user
+    Route::post('/users', [
+        'as' => 'add-user',
+        'uses' => 'FinbuController@AddUser'
+    ]);
+// user login
+    Route::GET('/user-login/{email}', [
+        'as' => 'user-login',
+        'uses' => 'FinbuController@UserLogin'
+    ]);
+// show all news
+    Route::GET('/home', [
+        'as' => 'show-all-news',
+        'uses' => 'FinbuController@ShowNews'
+    ]);
+// add new 
+    Route::POST('/add-news', [
+        'as' => 'add-news',
+        'uses' => 'FinbuController@AddNews'
+    ]);
 });
