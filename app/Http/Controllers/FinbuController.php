@@ -39,8 +39,19 @@ class FinbuController extends Controller
         } else {
             return redirect(Route('login'));
         }
-        
+
     }
+
+    // public function ShowBlogsPage() {
+    //     if(session()->has('role') && session()->get('role', 'ADMINISTRATOR')) {
+    //         $blogs = News::all();
+    //         $stt   = 0;
+    //         return view('blogs', compact('blogs', 'stt'));
+    //     } else {
+    //         return redirect(Route('login'));
+    //     }
+
+    // }
 
     // public function AddUser(Request $request) {
     //     try{
@@ -54,12 +65,12 @@ class FinbuController extends Controller
     //         $user->Cellphone=0;
     //         $user->Address = 0;
     //         $user->Password = $request->exampleInputPassword1;
-    
+
     //         $user->save();
     //         return back()->with('success', "Thành công!!");
     //     } catch(\Exception $error) {
     //         return back()->with('error', "Thất bại!!");
     //     }
-        
+
     // }
 }

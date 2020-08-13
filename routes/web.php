@@ -35,5 +35,9 @@ Route::post('/user',[
     'as' => 'add-user',
     'uses' => 'FinbuController@AddUser'
 ]);
+Route::GET('/blogs',[
+    'as' => 'show-blogs-page',
+    'uses' => 'FinbuController@ShowBlogsPage'
+]);
 
 

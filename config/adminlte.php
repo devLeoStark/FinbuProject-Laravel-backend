@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Olga</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -225,17 +225,17 @@ return [
             'icon'        => 'fas fa-fw fa-home',
         ],
         [
-            'text'        => 'Khách hàng',
+            'text'        => 'Người dùng',
             'url'         => 'user',
             'icon'        => 'fas fa-fw fa-users',
-            'label'       => 40,
+            // 'label'       => 40,
             'label_color' => 'primary',
         ],
         [
-            'text'        => 'Sản phẩm',
-            'url'         => 'product',
+            'text'        => 'Bảng tin',
+            'url'         => 'blogs',
             'icon'        => 'fab fa-product-hunt',
-            'label'       => 40,
+            // 'label'       => 40,
             'label_color' => 'success',
         ],
         [
@@ -263,30 +263,30 @@ return [
             ],
         ],
         [
-            'text'        => 'Đơn hàng',
+            'text'        => 'Hỗ trợ',
             'url'         => 'bills',
             'icon'        => 'fas fa-money-check-alt',
-            'label'       => 40,
+            // 'label'       => 40,
             'label_color' => 'success',
         ],
-        
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-        ],
+
+        // ['header' => 'labels'],
+        // [
+        //     'text'       => 'important',
+        //     'icon_color' => 'red',
+        // ],
         ['header' => 'account_settings'],
         [
-            'text' => 'profile',
+            'text' => 'Hồ sơ cá nhân',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        
+        // [
+        //     'text' => 'change_password',
+        //     'url'  => 'admin/settings',
+        //     'icon' => 'fas fa-fw fa-lock',
+        // ],
+
         [
             'text' => 'Đăng xuất',
             'url'  => 'admin/logout',

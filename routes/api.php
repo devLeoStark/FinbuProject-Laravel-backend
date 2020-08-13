@@ -29,7 +29,7 @@ Route::namespace('Api')->group(function() {
     Route::get('/users/{user_id}', [
         'as' => 'get-user',
         'uses' => 'FinbuController@GetUser'
-    
+
     ]);
 // add user
     Route::post('/users', [
@@ -46,9 +46,31 @@ Route::namespace('Api')->group(function() {
         'as' => 'show-all-news',
         'uses' => 'FinbuController@ShowNews'
     ]);
-// add new 
+// add new
     Route::POST('/add-news', [
         'as' => 'add-news',
         'uses' => 'FinbuController@AddNews'
     ]);
+    Route::GET('/add-news', [
+        'as' => 'add-news',
+        'uses' => 'FinbuController@AddNews'
+    ]);
+// insert like
+    Route::POST('/insert-like', [
+        'as' => 'insert-like',
+        'uses' => 'FinbuController@InsertLike'
+    ]);
+// show news of user
+    Route::GET('/news-of-user/{user_id}', [
+        'as' => 'get-news-of-user',
+        'uses' => 'FinbuController@GetNewsOfUser'
+    ]);
+
+    // show like amount of news
+    Route::GET('/like-amount/{news_id}/{user_id}', [
+        'as' => 'get-like-amount',
+        'uses' => 'FinbuController@LikeAmount'
+    ]);
 });
+
+

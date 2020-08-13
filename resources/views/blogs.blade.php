@@ -46,10 +46,10 @@
                                 <th width="3%"></th>
                                 <th width="3%"></th>
                             </tr>
-                            @foreach ($users as $user)
+                            @foreach ($blogs as $blog)
                                 <tr>
                                     <td>{{ $stt = $stt+1 }}</td>
-                                    <td> {{$user->User_Firstname}} {{ $user->User_Name }}</td>
+                                    <td> {{$blog->User_Firstname}} {{ $user->User_Name }}</td>
                                     @if($user->Gender == 1)
                                         <td>Nam</td>
                                     @else
